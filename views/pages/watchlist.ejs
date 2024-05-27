@@ -1,0 +1,45 @@
+<%- include('../partials/header', {title: 'Movie App'}) %>
+<%- include('../partials/navBar') %>
+
+
+    <h1>Watchlist for username: <%= user.username %></h1>
+    <div class="container">
+
+        <% if (movies && movies.length > 0) { %>
+            <h2 class="results__title">Movie Watchlist Results</h2>
+
+            <div class="results__container">
+                    <% movies.forEach(movie => { %>
+                        <!-- <%= movie.title %> -->
+                        <!-- Add other movie details as needed -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>" alt="Movie Poster">
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- <div class="flip-card-back_content"> -->
+                                    <div class="movie-data">
+                                        <span class="movie-title"><%= movie.title %></span>
+                                        <span class="movie-avg">Voter Average: <%= movie.vote_average %></span>
+                                        <span class="movie-release">Release Date: <%= movie.release_date %></span>
+                                        <span><a class="movie-watchlist" data-movieid="<%= movie.id %>" href="#">Remove from Watchlist (development)</a></span>
+                                        <!-- <button class="movie-add-watchlist" data-movieId="[<%= movie.id %>]">Add to Watchlist!</button> -->
+                                    </div>
+                                    
+                                    <div class="movie-description">
+                                        <p><%= movie.overview %></p>
+                                    </div>
+                                <!-- </div> -->
+                              </div>
+                            </div>
+                          </div>
+                    <% }); %>
+            <% } else { %>
+                <p>Movie Selection is available here.</p>
+            <% } %>
+            </div>
+    </div>
+<%- include('../partials/footer') %>
+
+

@@ -1,0 +1,10 @@
+<%- include('../partials/header', {title: 'Movie App'}) %>
+<%- include('../partials/navBar') %>
+    <h1>Login to the Movie App</h1>
+    <form action="" method="post">
+        <input type="text" name="l_username" id="l_username" placeholder="Enter Username">
+        <input type="text" name="l_pass" id="l_pass" placeholder="Enter Password">
+        <input type="submit" value="Submit" name="l_submit">
+    </form>
+    <h2 class="login__error"><%= error %></h2>
+<%- include('../partials/footer') %>

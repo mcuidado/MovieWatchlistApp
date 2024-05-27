@@ -1,0 +1,19 @@
+
+<nav class="nav__container">
+    <div class="nav-link__container">
+        <% if (user && user.username) { %>
+
+            <a href="/">Logout</a>
+            <a href="home">Home</a>
+            <a href="watchlist">Watchlist</a>
+
+        <% } else { %>
+
+            <a href="/">Landing</a>
+            <a href="/user/login">Login</a>
+            <a href="/user/register">Register</a>
+            
+        <% } %>
+    </div>
+</nav>
+

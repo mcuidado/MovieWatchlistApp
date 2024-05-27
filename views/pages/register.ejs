@@ -1,0 +1,15 @@
+
+<%- include('../partials/header', {title: 'Movie App'}) %>
+<%- include('../partials/navBar') %>
+
+    <h1>Register for the Movie App</h1>
+    <form action="" method="post">
+        <input type="text" name="r_username" id="r_username" placeholder="Enter Username">
+        <input type="text" name="r_email" id="r_email" placeholder="Enter Email">
+        <input type="text" name="r_pass" id="r_pass" placeholder="Enter Password">
+        <input type="text" name="r_pass_conf" id="r_pass_conf" placeholder="Confirm Password">
+        <input type="submit" value="Submit" name="r_submit">
+    </form>
+    <!-- <h2 class="register__error"><%= error %></h2> -->
+
+<%- include('../partials/footer') %>
